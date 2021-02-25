@@ -2,6 +2,9 @@ from _hackeys import *
 import struct
 import sys
 
+
+# Do `ls -la /dev/input/by-id` and whichever file is recieving your keyboard
+# input, that's the file you want to read from.
 f = open("/dev/input/event12", "rb")
 k = Keys()
 
