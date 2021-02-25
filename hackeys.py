@@ -1,15 +1,12 @@
 from _hackeys import *
-import struct 
+import struct
 import sys
-
 
 f = open("/dev/input/event12", "rb")
 k = Keys()
 
-
-
 try:
-    while 1:
+    while True:
         data = f.read(24)
         values = struct.unpack('4IHHI',data)
         
@@ -17,5 +14,7 @@ try:
 
 except KeyboardInterrupt:
     print("Exiting...")
+    break
 finally:
     f.close()
+sys.exit()
