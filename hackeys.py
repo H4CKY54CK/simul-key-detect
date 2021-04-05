@@ -3,7 +3,7 @@ import struct
 import sys
 
 
-# Do `ls -la /dev/input/by-id` and whichever file is recieving your keyboard
+# Do `ls -la /dev/input/by-id` and whichever file is receiving your keyboard
 # input, that's the file you want to read from.
 f = open("/dev/input/event12", "rb")
 k = Keys()
